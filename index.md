@@ -2,6 +2,14 @@
 layout: default
 title: Home
 ---
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
 
 <div class="posts">
   {% for post in paginator.posts %}
@@ -9,10 +17,8 @@ title: Home
     <h1 class="post-title">
 
 
-        <a href="{{ post.url }}">
-          {{ post.title }}
-        </a>
-    
+
+
 
     </h1>
 
