@@ -8,15 +8,11 @@ title: Home
   <div class="post">
     <h1 class="post-title">
 
-      {% if post.link %}
-        <a href="{{ post.link }}">
-          {{ post.title }} &rarr;
-        </a>
-      {% else %}
+
         <a href="{{ post.url }}">
           {{ post.title }}
         </a>
-      {% endif %}
+    
 
     </h1>
 
