@@ -2,16 +2,4 @@
 markdown:         rdiscount
 highlighter:      true
 
-# Permalinks
-permalink:        /:year/:month/:title
-
-# Setup
-title:            Alex Huang
-tagline:          'Developer, Speaker, Whisky Drinker'
-description:      'Developer, Speaker, Whisky Drinker'
-
-author:
-  name:           'Alex Huang'
-  url:            https://twitter.com/HuangHaihHui1
-
 paginate:         5
