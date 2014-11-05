@@ -1,3 +1,10 @@
 #setup
 title:         Alex Huang
 description:   'Developer, Crazy Football Fan, Lazy Man'
+
+
+#permalink
+permalink: date
+
+#how many items should be displayed per page
+pagniate: 5
