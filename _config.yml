@@ -6,13 +6,12 @@ highlighter:      true
 permalink:        /:year/:month/:title
 
 # Setup
-title:            Alex Bilbie
+title:            Alex Huang
 tagline:          'Developer, Speaker, Whisky Drinker'
 description:      'Developer, Speaker, Whisky Drinker'
-url:              http://localhost:4000
 
 author:
-  name:           'Alex Bilbie'
-  url:            https://twitter.com/alexbilbie
+  name:           'Alex Huang'
+  url:            https://twitter.com/HuangHaihHui1
 
 paginate:         5
