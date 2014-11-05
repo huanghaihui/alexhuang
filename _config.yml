@@ -1,5 +1,3 @@
-# Dependencies
-markdown:         rdiscount
-highlighter:      true
-
-paginate:         5
+#setup
+title:         Alex Huang
+description:   'Developer, Crazy Football Fan, Lazy Man'
