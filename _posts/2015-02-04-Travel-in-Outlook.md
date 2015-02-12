@@ -65,9 +65,7 @@ shownList.Clear();
 shownList.AddRange(items.OrderBy(i => i).ToArray());
 refreshChecker();
 </code>
-</pre>
-
-我们首先将存留的选项保存到list中，然后更新输出list。
+</pre>我们首先将存留的选项保存到list中，然后更新输出list。
 <code>
 private void refreshChecker()
 {
