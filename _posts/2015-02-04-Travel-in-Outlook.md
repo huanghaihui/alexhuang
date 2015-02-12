@@ -66,14 +66,23 @@ shownList.Clear();
 shownList.AddRange(items.OrderBy(i => i).ToArray());
 refreshChecker();
 </code></pre>
+
+
 <br>
 我们首先将存留的选项保存到list中，然后更新输出list。
 <br>
-<pre><code>private void refreshChecker()
+
+
+<pre><code>
+private void refreshChecker()
 {
   checkedListBox1.Items.Clear();
   foreach (string item in shownList)
-  checkedListBox1.Items.Add(item, CheckState.Unchecked);
-  }</code></pre>
+  checkedListBox1.Items.Add(item,
+  CheckState.Unchecked);
+}
+</code></pre>
+
+
 这样就可以保持搜索框及时更新了。
 ![Alt "searchBox"](/images/searchBox.png)
