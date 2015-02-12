@@ -45,7 +45,8 @@ if (item is Outlook.MailItem)
 
 ####搜索框刷新checkedListBox控件
 这里的目的是希望能够通过在搜索框的输入来进行刷新更新。这个做法比较简单，我们获取搜索框中的内容，然后对check列表进行扫描，包含搜索框中字段的则保留，不然清除。
-<pre><code>String text = this.searchBox.Text;
+<code>
+String text = this.searchBox.Text;
 shownList.Clear();
 shownList.AddRange(itemList);
 foreach (string check in itemList)
@@ -65,14 +66,14 @@ shownList.Clear();
 shownList.AddRange(items.OrderBy(i => i).ToArray());
 refreshChecker();
 </code>
-</pre>我们首先将存留的选项保存到list中，然后更新输出list。
-<code>
+我们首先将存留的选项保存到list中，然后更新输出list。
+<pre><code>
 private void refreshChecker()
 {
   checkedListBox1.Items.Clear();
   foreach (string item in shownList)
   checkedListBox1.Items.Add(item,
   CheckState.Unchecked);
-}</code>
+}</code></pre>
 这样就可以保持搜索框及时更新了,更新的图片可参考下面的：
 ![Alt "searchBox"](/images/searchBox.png)
