@@ -59,14 +59,14 @@ foreach (string check in itemList)
     shownList.Add(check);
   }
 }
-var items = new List<string>();
+var items = new List<string>();</code></pre><pre><code>
 foreach (string item in shownList) items.Add(item);
 shownList.Clear();
 shownList.AddRange(items.OrderBy(i => i).ToArray());
 refreshChecker();</code></pre>
 
 我们首先将存留的选项保存到list中，然后更新输出list。
-<pre><code><pre><codeprivate void refreshChecker()
+<pre><code>private void refreshChecker()
 {
   checkedListBox1.Items.Clear();
   foreach (string item in shownList)
