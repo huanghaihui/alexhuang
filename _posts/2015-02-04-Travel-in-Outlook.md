@@ -8,10 +8,9 @@ permalink: /2015/02/04/outlookdev2
 ###邮件Categories的复选框设计
 &nbsp;&nbsp;&nbsp;&nbsp;我选择了checkedListBox这个控件。选择这个控件的好处有以下几点：1.无需考虑每个check选项的位置，可以省去Draw 控件的时间。2.我们可以通过键盘输入字母，控件会自动跳到以该字母为首字母的选项，使用变得更加简洁方便。
 <br>     如何处理这个Categories的复选框呢？首先得获取相关得Categories：当然Outlook有相应的对象去存储整个邮箱的Categories。
-<pre><code> {% highlight c# by lineos%}
+<code>
      Outlook.Categories categories =  Globals.ThisAddIn.Application.Session.Categories;
-     {% endhighlight%}
-     </code></pre>
+     </code>
 然后就是将获取的categories存放的checkedListBox中。相关用法都可以在msdn上查到，这里就不做过多的介绍。
 ####保存选中的选项
 这通过触发该控件的ItemCheck事件：<code> checkedListBox1.ItemCheck += new ItemCheckEventHandler(this.Check_Clicked);</code>
@@ -46,7 +45,7 @@ if (item is Outlook.MailItem)
 
 ####搜索框刷新checkedListBox控件
 这里的目的是希望能够通过在搜索框的输入来进行刷新更新。这个做法比较简单，我们获取搜索框中的内容，然后对check列表进行扫描，包含搜索框中字段的则保留，不然清除。
-<pre><code>String text = this.searchBox.Text;
+<code>String text = this.searchBox.Text;
 shownList.Clear();
 shownList.AddRange(itemList);
 foreach (string check in itemList)
@@ -65,13 +64,14 @@ foreach (string item in shownList) items.Add(item);
 shownList.Clear();
 shownList.AddRange(items.OrderBy(i => i).ToArray());
 refreshChecker();
-</code></pre>
+</code>
+
 我们首先将存留的选项保存到list中，然后更新输出list。
-<pre><code>private void refreshChecker()
+<code>private void refreshChecker()
 {
   checkedListBox1.Items.Clear();
   foreach (string item in shownList)
   checkedListBox1.Items.Add(item, CheckState.Unchecked);
-  }</code></pre>
+  }</code>
 这样就可以保持搜索框及时更新了。
 ![Alt "searchBox"](/images/searchBox.png)
