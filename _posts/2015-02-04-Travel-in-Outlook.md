@@ -59,7 +59,7 @@ foreach (string check in itemList)
     shownList.Add(check);
   }
 }
-var items = new List<string>();</code></pre><pre><code>
+var items = new List<string>();
 foreach (string item in shownList) items.Add(item);
 shownList.Clear();
 shownList.AddRange(items.OrderBy(i => i).ToArray());
@@ -76,5 +76,5 @@ private void refreshChecker()
   checkedListBox1.Items.Add(item,
   CheckState.Unchecked);
 }</code>
-这样就可以保持搜索框及时更新了。
+这样就可以保持搜索框及时更新了,更新的图片可参考下面的：
 ![Alt "searchBox"](/images/searchBox.png)
